@@ -1,0 +1,17 @@
+{
+  "_observacao": "dia_semana: 0 = segunda ... 6 = domingo, relativo à semana de referência",
+  "eventos": [
+    {"id": "ev1", "titulo": "Daily do time", "dia_semana": 0, "inicio": "09:30", "fim": "09:45", "recorrente": "seg a sex"},
+    {"id": "ev2", "titulo": "Daily do time", "dia_semana": 1, "inicio": "09:30", "fim": "09:45", "recorrente": "seg a sex"},
+    {"id": "ev3", "titulo": "Daily do time", "dia_semana": 2, "inicio": "09:30", "fim": "09:45", "recorrente": "seg a sex"},
+    {"id": "ev4", "titulo": "Daily do time", "dia_semana": 3, "inicio": "09:30", "fim": "09:45", "recorrente": "seg a sex"},
+    {"id": "ev5", "titulo": "Daily do time", "dia_semana": 4, "inicio": "09:30", "fim": "09:45", "recorrente": "seg a sex"},
+    {"id": "ev6", "titulo": "Planejamento da sprint", "dia_semana": 0, "inicio": "14:00", "fim": "15:30"},
+    {"id": "ev7", "titulo": "1:1 com a Carla (tech lead)", "dia_semana": 1, "inicio": "16:00", "fim": "16:30"},
+    {"id": "ev8", "titulo": "Academia", "dia_semana": 1, "inicio": "18:30", "fim": "19:30"},
+    {"id": "ev9", "titulo": "Reunião com cliente — demo do painel", "dia_semana": 2, "inicio": "15:00", "fim": "16:00"},
+    {"id": "ev10", "titulo": "Academia", "dia_semana": 3, "inicio": "18:30", "fim": "19:30"},
+    {"id": "ev11", "titulo": "Retrospectiva da sprint", "dia_semana": 4, "inicio": "11:00", "fim": "12:00"},
+    {"id": "ev12", "titulo": "Aula do bootcamp DIO", "dia_semana": 2, "inicio": "19:30", "fim": "21:00"}
+  ]
+}

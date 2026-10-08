@@ -1,0 +1,7 @@
+anthropic>=1.12
+streamlit>=1.50
+python-dotenv>=1.0
+requests>=2.32
+# Necessários apenas para o Google Agenda real (JARVIS_MODO=real)
+google-api-python-client>=2.100
+google-auth-oauthlib>=1.2
