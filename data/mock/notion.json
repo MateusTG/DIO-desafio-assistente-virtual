@@ -1,0 +1,7 @@
+{
+  "paginas": [
+    {"id": "no1", "titulo": "Notas — Planejamento da sprint 23", "conteudo": "Objetivos da sprint: (1) estabilizar a API de relatórios, (2) entregar exportação CSV para o cliente, (3) aumentar cobertura de testes do faturamento para 70%."},
+    {"id": "no2", "titulo": "Guia de onboarding do time", "conteudo": "Como rodar o projeto localmente: clonar o monorepo, copiar .env.example para .env, rodar docker compose up. Padrão de branches: feat/, fix/, chore/."},
+    {"id": "no3", "titulo": "Ideias de estudo", "conteudo": "Aprofundar em C# async/await e LINQ; revisar padrões de projeto; terminar o lab de assistente virtual da DIO."}
+  ]
+}

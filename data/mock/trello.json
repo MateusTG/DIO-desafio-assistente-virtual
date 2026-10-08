@@ -1,0 +1,11 @@
+{
+  "quadro": "Projetos Pessoais",
+  "listas": ["A fazer", "Fazendo", "Em revisão", "Feito"],
+  "cartoes": [
+    {"id": "tr1", "titulo": "Finalizar README do assistente virtual (DIO)", "lista": "Fazendo", "prazo_dia_semana": 3, "etiquetas": ["estudos"]},
+    {"id": "tr2", "titulo": "Gravar pitch de 3 minutos do lab DIO", "lista": "A fazer", "prazo_dia_semana": 4, "etiquetas": ["estudos"]},
+    {"id": "tr3", "titulo": "Migrar blog pessoal para Next.js", "lista": "A fazer", "prazo_dia_semana": null, "etiquetas": ["side-project"]},
+    {"id": "tr4", "titulo": "Estudar async/await em C#", "lista": "A fazer", "prazo_dia_semana": null, "etiquetas": ["estudos"]},
+    {"id": "tr5", "titulo": "Configurar backup do servidor caseiro", "lista": "Em revisão", "prazo_dia_semana": 5, "etiquetas": ["infra"]}
+  ]
+}

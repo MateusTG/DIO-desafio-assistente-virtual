@@ -1,149 +1,122 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖 Jarvis: Assistente Pessoal com IA Generativa
 
-## Contexto
+> Projeto do Lab **"Construa Seu Assistente Virtual Com Inteligência Artificial"** da [DIO](https://www.dio.me/), feito a partir do [repositório base](https://github.com/digitalinnovationone/dio-lab-bia-do-futuro).
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+Inspirado no J.A.R.V.I.S. do Homem de Ferro, o **Jarvis** é um assistente pessoal para quem trabalha com tecnologia. Ele atua em três frentes:
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+| | Frente | O que faz |
+|---|---|---|
+| 📅 | **Agenda semanal** | Todo domingo, cruza agenda, tarefas e mensagens, monta a programação da semana e propõe blocos de foco com **alertas no Google Agenda** |
+| 🧰 | **Ferramentas** | Consulta e organiza **Trello, Linear, Slack e Notion**: o que vence, quem pediu o quê, cria cartões, issues, mensagens e páginas |
+| 💻 | **Programação** | Tira dúvidas de **web, Python, Node.js, PHP e C#** com base numa base de conhecimento curada, citando a fonte |
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
-
----
-
-## O Que Você Deve Entregar
-
-### 1. Documentação do Agente
-
-Defina **o que** seu agente faz e **como** ele funciona:
-
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
-
----
-
-### 2. Base de Conhecimento
-
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
-
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
+E ele **nunca age sozinho**: toda ação de escrita fica aguardando a sua aprovação.
 
 ```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+Você:   Cria um evento amanhã às 10h para revisar o PR da Bruna.
+
+Jarvis: Preparei "Revisar PR da Bruna (ENG-150)" na segunda, 12/10, das 10:00 às 11:00, com alerta
+        15 min antes. Está aguardando sua aprovação na barra lateral.      [ Aprovar ] [ Recusar ]
+```
+<sub>Exemplo ilustrativo do comportamento esperado, com os dados simulados.</sub>
+
+---
+
+## 🧠 Como funciona
+
+```mermaid
+flowchart LR
+    U[Você] --> UI[Streamlit] --> AG[Agente<br/>loop de ferramentas] <--> LLM{{Claude ou Ollama}}
+    AG --> L[Leitura<br/>executa na hora] --> D[(Agenda · Trello · Linear<br/>Slack · Notion · Base de código)]
+    AG --> E[Escrita] --> F[Fila de aprovação] -->|você aprova| D
+```
+
+- **O LLM usa ferramentas** (*tool use*) para consultar dados em vez de "lembrar" ou inventar.
+- **A base de programação** (7 arquivos Markdown) é pesquisada por seção, e cada trecho volta com a fonte (`php.md > Segurança`).
+- **As ações de escrita** viram itens numa fila de aprovação. Essa garantia está no código, não só no prompt.
+- **O código valida as propostas:** um evento com conflito de horário ou no passado volta como erro, e o modelo corrige.
+- **Modo demo** com dados simulados realistas (datas relativas, sempre na semana atual) ou **modo real** com as APIs das cinco ferramentas.
+
+---
+
+## 🗺️ Os 6 passos do desafio
+
+| # | Passo | Onde está | Destaques |
+|---|---|---|---|
+| 1 | Documentação | [docs/01-documentacao-agente.md](docs/01-documentacao-agente.md) | Persona Jarvis, arquitetura e 8 estratégias de segurança |
+| 2 | Base de conhecimento | [docs/02-base-conhecimento.md](docs/02-base-conhecimento.md) · [data/](data/) | Web, Python, Node.js, PHP, C#, boas práticas e produtividade |
+| 3 | Prompts | [docs/03-prompts.md](docs/03-prompts.md) | Prompt da Bia adaptado: 7 regras, rotina de domingo e few-shot |
+| 4 | Aplicação | [src/](src/) · [docs/06-integracoes.md](docs/06-integracoes.md) | Streamlit + 10 ferramentas + aprovação + cron de domingo |
+| 5 | Avaliação | [docs/04-metricas.md](docs/04-metricas.md) · [tests/](tests/) | 36 testes sem LLM e 13 casos com LLM nas 3 métricas |
+| 6 | Pitch | [docs/05-pitch.md](docs/05-pitch.md) | Roteiro de 3 minutos com demo |
+
+---
+
+## 🚀 Como rodar
+
+Requer **Python 3.10+**.
+
+```bash
+git clone <url-do-seu-fork>
+cd dio-lab-bia-do-futuro
+
+python -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+cp .env.example .env                 # escolha UMA opção de LLM abaixo
+```
+
+**Opção A, Claude (API da Anthropic):** coloque sua chave em `ANTHROPIC_API_KEY`.
+
+**Opção B, Ollama (local e gratuito):** instale o [Ollama](https://ollama.com), rode `ollama pull qwen2.5` e defina `LLM_PROVIDER=ollama`. Use um modelo com suporte a ferramentas.
+
+```bash
+streamlit run src/app.py             # interface web em http://localhost:8501
+python src/agente.py                 # ou pelo terminal
+```
+
+💡 Para ver o fluxo de domingo em qualquer dia, adicione `JARVIS_HOJE=2026-10-11` ao `.env`.
+
+🔌 Para conectar suas contas reais (Google Agenda, Trello, Slack, Linear e Notion) e agendar o planejamento de domingo no cron, veja [docs/06-integracoes.md](docs/06-integracoes.md).
+
+### Testes e avaliação
+
+```bash
+python -m unittest                   # 36 testes, não precisa de LLM
+python src/avaliacao.py              # 13 casos com o LLM; gera docs/resultados-avaliacao.md
 ```
 
 ---
 
-## Dicas Finais
+## 📁 Estrutura
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+```
+├── data/
+│   ├── perfil_usuario.json          # Usuário fictício (Alex): expediente, foco, stack
+│   ├── conhecimento/                # Base de programação e produtividade (Markdown)
+│   └── mock/                        # Agenda, Trello, Linear, Slack e Notion simulados
+├── docs/                            # Os 6 passos + guia de integrações
+├── src/
+│   ├── app.py                       # Interface Streamlit
+│   ├── agente.py                    # Prompt + loop de ferramentas (Claude/Ollama)
+│   ├── ferramentas.py               # Ferramentas + fila de aprovação
+│   ├── conhecimento.py              # Busca na base
+│   ├── integracoes/                 # Conectores simulados e reais
+│   ├── planejamento_semanal.py      # Planejamento automático (cron)
+│   └── avaliacao.py                 # Avaliação com casos_teste.json
+└── tests/                           # Testes sem LLM
+```
+
+---
+
+## ⚠️ Limitações
+
+- O Jarvis cria e consulta, mas não edita nem apaga eventos e tarefas. Também não executa código.
+- A base de programação é enxuta. Fora dela, ele responde com conhecimento geral e avisa.
+- Os conectores reais foram testados com respostas simuladas, mas ainda não com contas reais.
+- Veja a lista completa em [docs/01-documentacao-agente.md](docs/01-documentacao-agente.md#limitações-declaradas).
+
+## 🛠️ Tecnologias
+
+Python · Streamlit · [Claude API](https://docs.claude.com) (`claude-opus-5-5`, tool use) · Ollama · Google Calendar API · APIs de Trello, Slack, Linear e Notion

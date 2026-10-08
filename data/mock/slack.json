@@ -1,0 +1,8 @@
+{
+  "mensagens": [
+    {"id": "sl1", "canal": "#time-eng", "autor": "Carla", "dia_semana": -3, "hora": "17:42", "texto": "@Alex consegue priorizar a ENG-142 (CORS) logo na segunda? O cliente reclamou de novo."},
+    {"id": "sl2", "canal": "#produto", "autor": "Rafael", "dia_semana": -2, "hora": "10:15", "texto": "@Alex a demo do painel de quarta pode mostrar a exportação CSV? Seria ótimo."},
+    {"id": "sl3", "canal": "DM", "autor": "Bruna", "dia_semana": -2, "hora": "15:03", "texto": "Oi Alex! Pode revisar meu PR de autenticação (ENG-150) até quinta?"},
+    {"id": "sl4", "canal": "#random", "autor": "Diego", "dia_semana": -1, "hora": "20:11", "texto": "Alguém indica um bom livro de arquitetura de software?"}
+  ]
+}

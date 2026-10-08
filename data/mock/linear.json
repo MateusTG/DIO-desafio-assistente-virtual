@@ -1,0 +1,10 @@
+{
+  "time": "ENG",
+  "issues": [
+    {"id": "ENG-142", "titulo": "Corrigir erro de CORS na API de relatórios (Node.js)", "estado": "Todo", "prioridade": 1, "estimativa_horas": 3, "prazo_dia_semana": 1},
+    {"id": "ENG-138", "titulo": "Endpoint de exportação CSV no serviço Python (FastAPI)", "estado": "In Progress", "prioridade": 2, "estimativa_horas": 6, "prazo_dia_semana": 2},
+    {"id": "ENG-150", "titulo": "Revisar PR de autenticação no módulo PHP legado", "estado": "Todo", "prioridade": 2, "estimativa_horas": 2, "prazo_dia_semana": 3},
+    {"id": "ENG-155", "titulo": "Escrever testes xUnit para o serviço de faturamento (C#)", "estado": "Todo", "prioridade": 3, "estimativa_horas": 4, "prazo_dia_semana": 4},
+    {"id": "ENG-160", "titulo": "Atualizar documentação do onboarding no Notion", "estado": "Backlog", "prioridade": 4, "estimativa_horas": 1, "prazo_dia_semana": null}
+  ]
+}

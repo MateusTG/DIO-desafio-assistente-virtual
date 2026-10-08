@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+saida/
+credentials.json
+token.json
